@@ -1,0 +1,170 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: var(--outfit);
+  color: var(--stone-900);
+}
+
+:root {
+  --body-font-size: 16px;
+  --young-serif: Young Serif;
+  --head-font-weight: 100;
+  --outfit: outfit;
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+  width: clamp(23.5rem, 50vw, 45rem);
+  background-color: white;
+  margin-inline: auto;
+}
+
+
+
+.head-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  background-color: var(--stone-100);
+}
+
+
+
+/* Header */
+#omelette-img {
+  height: auto;
+  width: clamp(23.5rem, 90%, 40.5rem);
+}
+
+.heading-section, main {
+  margin-inline: 2rem;
+}
+
+.recipe-name {
+  font-family: var(--young-serif);
+  margin-block: 2rem;
+  font-weight: var(--head-font-weight);
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+.description {
+  font-size: var(--body-font-size);
+  color: var(--stone-900);
+}
+/* End */
+
+
+
+
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+
+
+
+/* Preparation Time */
+.preparation-time{
+  background-color: var(--rose-50);
+  width: 100%;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: 1rem;
+  height: max-content;
+}
+
+.preparation-time p {
+  margin-bottom: 0.5rem;
+  color: var(--rose-800);
+  font-weight: 600;
+  font-size: 1.35rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+span {
+  font-weight: 600;
+}
+/* end */
+
+
+
+
+
+/* Ingredients - Instruction - Nutrition */
+h2{
+  margin-bottom: 1rem;
+  font-family: var(--young-serif);
+  color: var(--brown-800);
+  font-weight: var(--head-font-weight);
+  font-size: 2rem;
+}
+
+hr {
+  border-top: solid var(--stone-150) 1px;
+  border-bottom: none;
+}
+
+li::marker {
+  color: var(--brown-800);
+  font-weight: bolder;
+}
+
+.nutri-facts {
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0.8rem;
+}
+ 
+.nutri-category {
+  font-weight: 400;
+}
+
+.nutri-stats {
+  color: var(--brown-800);
+}
+/* End */
+
+
+@media (min-width: 425px) {
+  .main-container {
+    margin-block: 8vw;
+    border-radius: 1rem;
+    padding-block: min(2.5rem, 4vw);
+  }
+
+  #omelette-img {
+    width: 90%;
+    border-radius: 1rem;
+  }
+}
